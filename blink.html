@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            display:flex;
+            font-family:Arial,sans-serif;
+            margin: 5vh;
+            padding: 10%;
+            overflow:hidden;
+            background-color: rgba(244, 177, 8, 0.589);
+            font-size: 50px;
+        }
+        .scrollable-text{
+            position:absolute;
+            white-space:nowrap;
+            animation:scrollText 10s linear infinite;
+            color:rgb(12, 158, 158):
+        }
+        .blinking-text{
+            animation:blinkText 1s alternate infinite;
+            color:red;
+        }
+        @keyframes scrollText{
+            0%{
+             transform:translateX(100%);
+            }
+            100%{
+                transform:translateX(-100%);
+               }
+            }
+            @keyframes blinkText{
+                0%,100%{
+                    opacity:1;
+                }
+                50%{
+                    opacity:0;
+                }
+            }
+    </style>
+    <title>CSS Animation Demo</title>
+</head>
+<body>
+    <div class="scrollable-text">
+        This is scrollable text
+    </div>
+    <div class="blinking-text">
+        <p>this is blinking text</p>
+        <p>show results in a different line</p>
+    </div>
+</body>
+</html>
